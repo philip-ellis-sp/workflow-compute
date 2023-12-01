@@ -1,0 +1,46 @@
+{
+	"name": "workflow-compute",
+	"commands": [
+		"std:account:list",
+		"std:account:read",
+		"std:test-connection",
+		"std:account:disable"
+	],
+	"sourceConfig": [
+		{
+			"type": "menu",
+			"label": "Configuration",
+			"items": [
+				{
+					"type": "section",
+					"sectionTitle": "Authentication",
+					"sectionHelpMessage": "Provide connection parameters to interact securely with the target application.",
+					"items": [
+						{
+							"key": "token",
+							"label": "Token",
+							"type": "text"
+						}
+					]
+				}
+			]
+		}
+	],
+	"accountSchema":{
+		"displayAttribute": "display",
+		"identityAttribute": "id",
+		"attributes":[
+			{
+				"name": "display",
+				"type": "string",
+				"description": "Display Attribute"
+			},
+			{
+				"name": "id",
+				"type": "string",
+				"description": "Identity Attribute"
+			}
+		]
+	},
+	"entitlementSchemas": []
+}
